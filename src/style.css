@@ -1,3 +1,153 @@
-.rojo {
-    background-color: lightcoral;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*---------------------------Reset css above----------------------------------------------*/
+:root {
+    --background-dark: rgba(0, 0, 0, 0.7);
+    --background-light: rgba(0, 0, 0, 0.5);
+}
+
+html {
+    font-size: 65%;
+}
+
+body {
+    background-image: url('./coffee.PNG');
+    /* height: 100vh;
+    width: 100vw; */
+    font-size: 1.5rem;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-family: cursive, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    background-color: var(--background-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 97.8%;
+    padding: 2rem;
+}
+
+.name {
+    font-size: 8rem;
+    margin-bottom: 3rem;
+}
+
+nav {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-btn {
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: transparent;
+    color: white;
+    border: 3px solid transparent;
+    transition: transform 0.4s;
+    cursor: pointer;
+}
+
+.nav-btn.active {
+    border-bottom: 3px solid white;
+}
+
+.nav-btn:hover {
+    transform: translateY(-10%);
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+#main {
+    max-width: 700px;
+    padding: 3rem;
+    margin: 6rem 0;
+    font-size: 3rem;
+    background-color: var(--background-light);
+    /* border: 1px solid white; */
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 530px;
+    width: 620px;
+    animation: fadeIn 1.5s;
+}
+
+.home p {
+    padding: 1rem;
+}
+
+
+
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
