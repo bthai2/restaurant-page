@@ -1,5 +1,5 @@
 import './style.css';
-import Icon from './bsc.png';
+import Icon from './latte.png';
 
 function component() {
     const element = document.createElement('div');

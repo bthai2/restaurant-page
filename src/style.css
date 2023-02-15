@@ -59,7 +59,7 @@ html {
 }
 
 body {
-    background-image: url('./coffee.PNG');
+    background-image: url('../dist/d89f7b7a549e561b0505.PNG');
     /* height: 100vh;
     width: 100vw; */
     font-size: 1.5rem;
@@ -100,12 +100,9 @@ nav {
     cursor: pointer;
 }
 
-.nav-btn.active {
+.nav-btn.active, .nav-btn:hover {
     border-bottom: 3px solid white;
-}
-
-.nav-btn:hover {
-    transform: translateY(-10%);
+    transform: translateY(-15%);
 }
 
 #content {
@@ -139,7 +136,15 @@ nav {
     padding: 1rem;
 }
 
+.home img {
+    width: 50%;
+    margin: 3rem 0;
+    opacity: 90%;
+}
 
+.round {
+    border-radius: 100%;
+}
 
 
 @keyframes fadeIn {
