@@ -6,12 +6,6 @@ function about () {
   const m = generateElement('div', 'about', '')
   m.id = 'main'
 
-  //   const item1 = addItem(coffeeImage1, 'round', 'latte art', 'Latte', 'Organic Coffee, Your choice of milk, sugar')
-  //   m.appendChild(item1)
-
-  //   const item2 = addItem(coffeeImage2, 'round', 'iced coffee', 'Iced Coffee', 'Organic Coffee, Ice, Your choice of milk, sugar')
-  //   m.appendChild(item2)
-
   const text = generateElement('p', '', 'This is a sample about section.')
   m.appendChild(text)
 

@@ -4,7 +4,6 @@ import generateElement from './generateElement.js'
 import makeHeader from './makeHeader.js'
 
 function home () {
-  // let mainDiv = generateElement('div', 'main', '');
   const h = generateElement('div', 'home', '')
   h.id = 'main'
 
