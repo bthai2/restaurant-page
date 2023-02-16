@@ -1,19 +1,12 @@
 import './style.css';
-import Icon from './latte.png';
+import homePage from './home.js';
+// import generateElement from './generateElement.js';
 
-function component() {
-    const element = document.createElement('div');
+// document.body.firstChild.appendChild(homePage());
+// let div = generateElement('header', '', 'yes');
+// document.body.appendChild(div);
 
-    element.textContent = 'hello';
-    element.classList.add('rojo');
+// const div = document.createElement('div');
+// div.id = 'content';
 
-    const myIcon = new Image();
-    myIcon.src = Icon;
-    element.appendChild(myIcon);
-
-    return element;
-}
-
-
-
-// document.body.appendChild(component());
+document.body.appendChild(homePage());
