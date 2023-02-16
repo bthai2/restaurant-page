@@ -5,7 +5,8 @@ module.exports = {
   entry: {
     index: './src/index.js',
     home: './src/home.js',
-    generateElement: './src/generateElement.js'
+    generateElement: './src/generateElement.js',
+    makeHeader: './src/makeHeader.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -15,7 +16,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    // clean: true,
+    clean: true,
   },
   module: {
     rules: [
