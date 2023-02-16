@@ -1,3 +1,6 @@
+/* eslint-disable semi */
+/* eslint-disable comma-dangle */
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 

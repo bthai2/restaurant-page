@@ -2,6 +2,7 @@ import './style.css'
 import generateElement from './generateElement.js'
 import makeHeader from './makeHeader.js'
 import coffeeImage1 from './latteArt.jpg'
+import coffeeImage2 from './iceCoffee.jpg'
 
 function addItem (imgSrc, imgClass, imgAlt, itemName, itemDesc) {
   const item = generateElement('div', 'item', '')
@@ -26,8 +27,10 @@ function menu () {
   m.id = 'main'
 
   const item1 = addItem(coffeeImage1, 'round', 'latte art', 'Latte', 'Organic Coffee, Your choice of milk, sugar')
-
   m.appendChild(item1)
+
+  const item2 = addItem(coffeeImage2, 'round', 'iced coffee', 'Iced Coffee', 'Organic Coffee, Ice, Your choice of milk, sugar')
+  m.appendChild(item2)
 
   return m
 }
