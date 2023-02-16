@@ -1,5 +1,6 @@
 import './style.css';
 import homePage from './home.js';
+import menuPage from './menu.js';
 // import generateElement from './generateElement.js';
 
 // document.body.firstChild.appendChild(homePage());
@@ -9,4 +10,4 @@ import homePage from './home.js';
 // const div = document.createElement('div');
 // div.id = 'content';
 
-document.body.appendChild(homePage());
+document.body.appendChild(menuPage());

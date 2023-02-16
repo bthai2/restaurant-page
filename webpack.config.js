@@ -5,8 +5,7 @@ module.exports = {
   entry: {
     index: './src/index.js',
     home: './src/home.js',
-    generateElement: './src/generateElement.js',
-    makeHeader: './src/makeHeader.js',
+    menu: './src/menu.js',
   },
   plugins: [
     new HtmlWebpackPlugin({

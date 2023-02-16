@@ -52,6 +52,7 @@ table {
 :root {
     --background-dark: rgba(0, 0, 0, 0.8);
     --background-light: rgba(0, 0, 0, 0.6);
+    --menu-gap: 3rem;
 }
 
 html {
@@ -144,6 +145,43 @@ nav {
 
 .round {
     border-radius: 100%;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: var(--menu-gap);
+    column-gap: var(--menu-gap);
+    animation: fadeIn 1.5s;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    padding: 3rem;
+    background-color: var(--background-light);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.item:hover {
+    background-color: rgba(143, 143, 143, 0.4);
+}
+
+.item h2 {
+    padding: 2rem;
+}
+
+.item p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.item img {
+    width: 50%;
 }
 
 
