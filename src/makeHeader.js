@@ -1,36 +1,52 @@
-import generateElement from './generateElement.js';
+import generateElement from './generateElement.js'
+import homePage from './home.js'
+import menuPage from './menu.js'
+import aboutPage from './about.js'
 
-export default function header(activeBtn) {
-    let h = generateElement('header', '', '');
+export default function header (activeBtn) {
+  const h = generateElement('header', '', '')
 
-    let name = generateElement('h1', 'name', 'Cafe Bean');
-    h.appendChild(name);
+  const name = generateElement('h1', 'name', 'Cafe Bean')
+  h.appendChild(name)
 
-    let nav = generateElement('nav', '', '');
+  const nav = generateElement('nav', '', '')
 
-    let homeBtn = generateElement('button', 'nav-btn', 'Home');
-    homeBtn.id = 'nav-home';
-    
+  const homeBtn = generateElement('button', 'nav-btn', 'Home')
+  homeBtn.id = 'nav-home'
 
-    let menuBtn = generateElement('button', 'nav-btn', 'Menu');
-    menuBtn.id = 'nav-menu';
-    
+  const menuBtn = generateElement('button', 'nav-btn', 'Menu')
+  menuBtn.id = 'nav-menu'
 
-    let aboutBtn = generateElement('button', 'nav-btn', 'About');
-    aboutBtn.id = 'nav-about';
+  const aboutBtn = generateElement('button', 'nav-btn', 'About')
+  aboutBtn.id = 'nav-about'
 
-    if(activeBtn === 'home'){
-        homeBtn.classList.add('active');
-    } else if(activeBtn === 'menu'){
-        menuBtn.classList.add('active');
-    } else {
-        aboutBtn.classList.add('active');
-    }
-    
-    nav.appendChild(homeBtn);
-    nav.appendChild(menuBtn);
-    nav.appendChild(aboutBtn);
-    h.appendChild(nav);
-    
-    return h;
+  if (activeBtn === 'home') {
+    homeBtn.classList.add('active')
+  } else if (activeBtn === 'menu') {
+    menuBtn.classList.add('active')
+  } else {
+    aboutBtn.classList.add('active')
+  }
+
+  homeBtn.addEventListener('click', () => {
+    document.body.removeChild(document.getElementById('content'))
+    document.body.appendChild(homePage())
+  })
+
+  menuBtn.addEventListener('click', () => {
+    document.body.removeChild(document.getElementById('content'))
+    document.body.appendChild(menuPage())
+  })
+
+  aboutBtn.addEventListener('click', () => {
+    document.body.removeChild(document.getElementById('content'))
+    document.body.appendChild(aboutPage())
+  })
+
+  nav.appendChild(homeBtn)
+  nav.appendChild(menuBtn)
+  nav.appendChild(aboutBtn)
+  h.appendChild(nav)
+
+  return h
 }
